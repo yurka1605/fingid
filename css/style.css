@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.3;
+    color: rgba(0, 0, 0, 255);
+    transition: all .3s linear;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 550px;
+    background: url('../img/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header__nav {
+    padding: 30px 0;
+}
+.logo img {
+    width: 160px;
+    height: 45px;
+}
+.header__nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    padding: 0 10px;
+    list-style-type: none;
+}
+.nav__link {
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none!important;
+    color: #000000;
+}
+.header__right {
+    display: flex;
+    align-items: center;
+}
+.header-right_icon img {
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+}
+.header-right_icon {
+    padding: 0 20px;
+    line-height: 1;
+}
+.header__contacts {
+    display: flex;
+    flex-direction: column;
+}
+.header__contacts a {
+    font-weight: 600;
+    text-decoration: none!important;
+    color: #000000;
+    padding-bottom: 7px;
+    line-height: 1;
+}
+.header__contacts {
+    font-size: 14px;
+    line-height: 1;
+}
+.banner__title {
+    font-size: 36px;
+}
+.banner__slide p {
+    line-height: 1;
+    padding: 30px 0;
+    font-size: 18px;
+}
+.banner__slide button {
+    height: 50px;
+    width: 210px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+    background: #ef3124;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    transition: all .3s linear;
+    outline: none;
+}
+.banner__slide button:hover {
+    background: #bd291e;
+}
+/* HEADER:END */
+
+/* BANNER */
+.banner {
+    overflow: hidden;
+    padding: 50px 0 140px 0;
+}
+.banner__slider {
+    display: flex;
+    align-items: center;
+}
+.banner__slide {
+    min-width: 100%;
+}
+.banner__nav {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+.banner__point {
+    width: 6px;
+    height: 6px;
+    background-color: #999999;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.banner__point.active {
+    width: 20px;
+    background-color: #000000;
+}
+/* BANNER:END */
+
+/* courses */
+.courses {
+    margin-top: -50px;
+}
+.courses .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 50px;
+    box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.75);
+}
+.courses__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+}
+.corses__item {
+    margin-left: 50px;
+}
+.courses__price {
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+.courses__info {
+    display: flex;
+}
+.courses__name {
+    line-height: 18px;
+    font-size: 18px;
+    color: #f0483e;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.courses__bank {
+    line-height: 18px;
+    font-weight: 500;
+    color: #9b9da1;
+}
+.courses__title h2 {
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 6px;
+}
+.courses__title p {
+    color: #9b9da1;
+    font-weight: 500;
+    line-height: 1;
+}
+/* courses:END */
+
+/* calculator */
+.calculator {
+    padding: 60px 0;
+}
+.calculator__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.calculator__title {
+    font-size: 32px;
+    line-height: 1;
+}
+.calculator__best,
+.calculator__main {
+    width: calc((100% - 50px) / 2);
+}
+.calculator__best {
+    padding: 30px 40px 40px 40px;
+    box-shadow: 0px 2px 13px -3px rgba(153,153,153,1);
+}
+.calc__control {
+    position: relative;
+    width: 100%;
+    margin-top: 35px;
+}
+.calc__control label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(155, 157, 161, 255);
+    padding: 16px 20px 20px 20px;
+    transition: all .3s linear;
+}
+.calc__control input {
+    width: 100%;
+    height: 70px;
+    background-color: #eeeff1;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 36px 20px 20px 20px;
+    outline: none;
+    border: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.calc__desc {
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(155, 157, 161, 255);
+    margin-top: 25px;
+}
+.form-control__wrap {
+    position: relative;
+}
+.calc__numbers {
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgba(155, 157, 161, 255);
+}
+.calc__slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+.calc__slider-current {
+    background-color: #ef3124;
+    width: 73%;
+    height: 100%;
+    transition: all .3s linear;
+}
+.calc__clider-point {
+    position: absolute;
+    left: 73%;
+    top: -6px;
+    margin-left: -6px;
+    width: 15px;
+    height: 15px;
+    background-color: #ef3124;
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+.control-srok .calc__slider-current {
+    width: 60%;
+}
+.control-srok .calc__clider-point {
+    left: 60%;
+}
+.calculator__best_title {
+    font-size: 24px;
+}
+.calculator__best_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    margin: 25px 0;
+    padding: 30px 0 22px 0;
+}
+.calculator__best_params-list {
+    display: flex;
+    list-style-type: none;
+}
+.calculator__best_params-item {
+    margin-left: 30px;
+}
+.calculator__best_params-item span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+.calculator__best_params-item p {
+    font-size: 14px;
+    color: #999999;
+}
+.calculator__best-controls button {
+    width: 210px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 0;
+    font-weight: 600; 
+    cursor: pointer;
+    outline: none;
+    transition: all .3s linear;
+}
+.calculator__best-send {
+    color: #fff;
+    background-color: #f0483e;
+}
+.calculator__best-send:hover {
+    background-color: #bd291e;
+}
+.calculator__best-show-all:hover {
+    background-color: #b6b6b6;
+}
+/* calculator:end */
+
+/* best-mounth */
+.best-mounth {
+    background-color: #f2f6ff;
+    padding: 60px 0;
+}
+.best-mounth__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.best-mounth__title h2 {
+    font-size: 32px;
+}
+.best-mounth__title button {
+    width: 210px;
+    height: 50px;
+    background: #dae0eb;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 500;
+    outline: none;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+.best-mounth__title button:hover {
+    background: #b9c7e2;
+}
+.best-mounth__tabs {
+    display: flex;
+    align-items: center;
+    height: 33px;
+    border-bottom: 1px solid #d8dadf;
+}
+.best-mounth__tab {
+    height: 100%;
+    font-weight: 600;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.best-mounth__tab:hover,
+.best-mounth__tab.active {
+    border-bottom: 3px solid #f0483e;
+}
+.tabs__content {
+    padding-top: 42px;
+}
+.best-mounth__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.best-mounth__card {
+    width: calc((100% - 60px) / 4);
+    padding: 30px 30px 0 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(153,153,153,1);
+    overflow: hidden;
+    text-align: center;
+}
+.best-mounth__card_name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 20px 0;
+    color: rgba(155, 157, 161, 255);
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d8dadf;
+}
+.best-mounth__stavka {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.best-mounth__summ {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.best-mounth__srok {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.best-mounth__card button {
+    background-color: #ef3124;
+    color: #fff;
+    font-weight: 500;
+    height: 50px;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    border: 0;
+    transition: all .3s linear;
+    outline: none;
+    cursor: pointer;
+}
+.best-mounth__card button:hover {
+    background-color: #b9291f;
+}
+/* best-mounth:end */
+
+/* Containers */
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1240px;
+    }
+}

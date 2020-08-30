@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Fingid</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.png" alt="Logotype">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav__list">
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Микрозаймы</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Кредиты</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Карты</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">О компании</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <div class="header-right_icon search">
+                        <img src="./img/icons/find-icon.png" alt="find">
+                    </div>
+                    <div class="header-right_icon user">
+                        <img src="./img/icons/user-icon.png" alt="user">
+                    </div>
+                    <div class="header-right_icon phone">
+                        <img src="./img/icons/phone-icon.png" alt="phone">
+                    </div>
+                    <div class="header__contacts">
+                        <a href="tel:+79765462143">+7 (976) 546-21-43</a>
+                        <span class="header__address">Москва, Пушкина, 19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="banner">
+            <div class="banner__slider">
+                <div class="banner__slide active">
+                    <div class="container">
+                        <h2 class="banner__title">
+                            Решение Ваших<br>
+                            финансовых проблем
+                        </h2>
+                        <p>Актуальные кредиты со ставкой от 3.0%</p>
+                        <button>Отправить заявку</button>
+                    </div>
+                </div>
+                <div class="banner__slide">
+                    <div class="container">
+                        <h2 class="banner__title">
+                            Решение Ваших<br>
+                            финансовых проблем
+                        </h2>
+                        <p>Актуальные кредиты со ставкой от 3.0%</p>
+                        <button>Отправить заявку</button>
+                    </div>
+                </div>
+                <div class="banner__slide">
+                    <div class="container">
+                        <h2 class="banner__title">
+                            Решение Ваших<br>
+                            финансовых проблем
+                        </h2>
+                        <p>Актуальные кредиты со ставкой от 3.0%</p>
+                        <button>Отправить заявку</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="banner__nav">
+                    <div class="banner__point active"></div>
+                    <div class="banner__point"></div>
+                    <div class="banner__point"></div>
+                    <div class="banner__point"></div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="courses">
+            <div class="container">
+                <div class="courses__title">
+                    <h2>Курсы валют в банках</h2>
+                    <p>Актуальны на 21.07.2020 18:54</p>
+                </div>
+                <ul class="courses__list">
+                    <li class="corses__item">
+                        <div class="courses__price">71.2298</div>
+                        <div class="courses__info">
+                            <div class="courses__name">USD</div>
+                            <div class="courses__bank">ЦБ</div>
+                        </div>
+                    </li>
+                    <li class="corses__item">
+                        <div class="courses__price">80.2689</div>
+                        <div class="courses__info">
+                            <div class="courses__name">EUR</div>
+                            <div class="courses__bank">ЦБ</div>
+                        </div>
+                    </li>
+                    <li class="corses__item">
+                        <div class="courses__price">10.1664</div>
+                        <div class="courses__info">
+                            <div class="courses__name">CNY</div>
+                            <div class="courses__bank">ЦБ</div>
+                        </div>
+                    </li>
+                    <li class="corses__item">
+                        <div class="courses__price">70.728</div>
+                        <div class="courses__info">
+                            <div class="courses__name">USD/RUB</div>
+                            <div class="courses__bank">Биржа</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="calculator">
+            <div class="container">
+                <h2 class="calculator__title">Кредитный калькулятор</h2>
+                <div class="calculator__wrap">
+                    <div class="calculator__main">
+                        <div class="calc__control">
+                            <div class="form-control__wrap control-summ">
+                                <label for="summ">Сумма микрозайма</label>
+                                <input value="7 300 ₽" id="summ" type="text">
+                                <div class="calc__slider">
+                                    <div class="calc__slider-current"></div>
+                                    <div class="calc__clider-point"></div>
+                                </div>
+                            </div>
+                            <div class="calc__numbers">
+                                <span>1 000 ₽</span>
+                                <span>2 500 ₽</span>
+                                <span>5 000 ₽</span>
+                                <span>7 500 ₽</span>
+                                <span>10 000 ₽</span>
+                            </div>
+                        </div>
+                        <div class="calc__control">
+                            <div class="form-control__wrap control-srok">
+                                <label for="srok">Срок микрозайма</label>
+                                <input value="18 дней" id="srok" type="text">
+                                <div class="calc__slider">
+                                    <div class="calc__slider-current"></div>
+                                    <div class="calc__clider-point"></div>
+                                </div>
+                            </div>
+                            <div class="calc__numbers">
+                                <span>1 день</span>
+                                <span>7 дней</span>
+                                <span>15 дней</span>
+                                <span>23 дня</span>
+                                <span>30 дней</span>
+                            </div>
+                        </div>
+                        <p class="calc__desc">
+                            Расчет калькулятора произведен по ставкам, действующим при условии
+                            оформления финансовой защиты к кредиту. Не является публичной офертой.
+                        </p>
+                    </div>
+                    <div class="calculator__best">
+                        <h3 class="calculator__best_title">Лучшее предложение</h3>
+                        <div class="calculator__best_main">
+                            <img src="./img/banks/tinkoff.png" alt="tinkoff">
+                            <ul class="calculator__best_params-list">
+                                <li class="calculator__best_params-item">
+                                    <span>1.75%</span>
+                                    <p>Ставка в день</p>
+                                </li>
+                                <li class="calculator__best_params-item">
+                                    <span>26.07.20</span>
+                                    <p>Срок займа</p>
+                                </li>
+                                <li class="calculator__best_params-item">
+                                    <span>10 200 ₽</span>
+                                    <p>Возвращаете</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="calculator__best-controls">
+                            <button class="calculator__best-send">Отправить заявку</button>
+                            <button class="calculator__best-show-all">Посмотреть все</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best-mounth">
+            <div class="container">
+                <div class="best-mounth__title">
+                    <h2>Лучшие предложения месяца</h2>
+                    <button>Посмотреть все</button>
+                </div>
+                <div class="best-mounth__main">
+                    <div class="best-mounth__tabs">
+                        <div class="best-mounth__tab active">Займы</div>         
+                        <div class="best-mounth__tab">Микрозаймы</div>         
+                        <div class="best-mounth__tab">Кредиты</div>         
+                        <div class="best-mounth__tab">Карты</div>
+                    </div>
+                    <div class="tabs__content">
+                        <ul class="best-mounth__cards">
+                            <li class="best-mounth__card">
+                                <img src="./img/banks/cashu.png" alt="cashu">
+                                <h3 class="best-mounth__card_name">Cash-U finance</h3>
+                                <p class="best-mounth__stavka">от 1%</p>
+                                <p class="best-mounth__summ">Сумма до 30 000 ₽</p>
+                                <p class="best-mounth__srok">Срок от 5 до 25 дней</p>
+                                <button>Отправить заявку</button>
+                            </li>
+                            <li class="best-mounth__card">
+                                <img src="./img/banks/belkacredit.png" alt="belkacredit">
+                                <h3 class="best-mounth__card_name">Заем от BelkaCredit</h3>
+                                <p class="best-mounth__stavka">от 1%</p>
+                                <p class="best-mounth__summ">Сумма до 30 000 ₽</p>
+                                <p class="best-mounth__srok">Срок от 7 до 30 дней</p>
+                                <button>Отправить заявку</button>
+                            </li>
+                            <li class="best-mounth__card">
+                                <img src="./img/banks/beforezp.png" alt="beforezp">
+                                <h3 class="best-mounth__card_name">Займ онлайн под 0%</h3>
+                                <p class="best-mounth__stavka">от 0.5%</p>
+                                <p class="best-mounth__summ">Сумма до 100 000 ₽</p>
+                                <p class="best-mounth__srok">Срок от 7 до 365 дней</p>
+                                <button>Отправить заявку</button>
+                            </li>
+                            <li class="best-mounth__card">
+                                <img src="./img/banks/monetkin.png" alt="monetkin">
+                                <h3 class="best-mounth__card_name">Онлайн-займ Монеткин</h3>
+                                <p class="best-mounth__stavka">от 0.4%</p>
+                                <p class="best-mounth__summ">Сумма до 100 000 ₽</p>
+                                <p class="best-mounth__srok">Срок от 2 до 365 дней</p>
+                                <button>Отправить заявку</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best-credit">
+            <div class="container">
+                <h2 class="best-credit">Лучшие условия по кредитам</h2>
+                <div class="best-credit__wrap">
+                    <ul class="best-credit__list">
+                        <li class="best-credit__item">
+                            
+                        </li>
+                    </ul>
+                    <div class="best-credit__popular"></div>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+
+        </section>
+        <section class="russia-banks">
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <img src="./img/logo-footer.png" alt="logo-footer">
+                <p>
+                    © 2020 f-gid.ru<br>
+                    Все права защищены.
+                </p>
+            </div>
+            <div class="footer__center">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#">Микрозаймы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">Кредиты</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">Карты</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">О компании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
