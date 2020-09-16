@@ -728,8 +728,427 @@ body {
 .footer__right a {
     font-weight: 600;
 }
+.footer__social span,
+.footer__left p {
+    opacity: 0.5;
+}
 /* FOOTER:END */
 
+@media (max-width: 1200px) {
+    .header-right_icon {
+        padding: 0 10px;
+    }
+    .best-mounth__card img {
+        height: 50px;
+        width: auto;
+    }
+    .nav__list {
+        width: 500px;
+    }
+    .best-mounth__card_name {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+    .best-mounth__card {
+        padding: 20px 20px 0 20px;
+    }
+    .best-col-1 {
+        flex: 2;
+    }
+    .calculator__best_params-item {
+        margin-left: 10px;
+    }
+    .calculator__best {
+        padding: 25px;
+    }
+    .calculator__best_main img {
+        width: 100px;
+        height: auto;
+    }
+    .calculator__best-controls {
+        display: flex;
+        justify-content: space-between;
+    }
+    .calculator__best-controls button {
+        width: calc((100% - 20px)/2);
+        margin-right: 0;
+    }
+}
+.mobile,
+.header__burger {
+    display: none;
+}
+@media (max-width: 992px) {
+    .russia-banks {
+        max-width: 720px;
+    }
+    .header__nav nav {
+        display: none;
+    }
+    .header__burger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 25px;
+        height: 17px;
+        margin-left: 35px;
+        cursor: pointer;
+    }
+    .header__burger i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000000;
+    }
+    .header__nav .header__contacts,
+    .header__nav .header-right_icon {
+        display: none;
+    }
+    .header__nav .header-right_icon.phone {
+        display: block;
+    }
+    .logo img {
+        width: 143px;
+        height: 40px;
+    }
+    .header-right_icon img {
+        width: 25px;
+        height: 25px;
+    }
+    .courses .container {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .courses__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 22px;
+    }
+    .corses__item {
+        margin-left: 0;
+    }
+    .calculator__wrap {
+        flex-direction: column;
+    }
+    .calculator__best, .calculator__main {
+        width: 100%;
+    }
+    .calculator__best {
+        margin-top: 25px;
+    }
+    .best-mounth__card {
+        width: calc((100% - 60px)/2);
+    }
+    .best-mounth__card:nth-child(3),
+    .best-mounth__card:nth-child(4) {
+        display: none;
+    }
+    .mobile {
+        width: 100%;
+        display: block;
+        margin-top: 22px;
+        margin-bottom: 0;
+    }
+    .best-mounth__title button {
+        display: none;
+    }
+    .best-mounth__title.mobile button {
+        display: block;
+        width: 100%;
+    }
+    .best-credit__wrap {
+        flex-direction: column;
+    }
+    .best-credit__list {
+        width: 100%;
+        margin-right: 0;
+    }
+    .best-credit__popular {
+        margin-top: 30px;
+        padding: 30px;
+        width: 100%;
+    }
+    .mobile .feedback-btns {
+        display: block;
+    }
+    .feedback-btns {
+        display: none;
+    }
+    .feedback__item:last-child {
+        display: none;
+    }
+    .feedback__item {
+        width: calc((100% - 40px)/2);
+    }
+    .footer__social {
+        flex-direction: column;   
+    }
+    .footer__social-items {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        width: 100%;
+        padding-top: 15px;
+    }
+    .footer__social-item {
+        padding-right: 0;
+    }
+    .footer__nav {
+        display: none;
+    }
+}
+.mobile__menu {
+    position: fixed;
+    right: -120%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    transition: all 0.3s linear;
+    padding: 50px;
+    z-index: 999;
+}
+.mobile__menu.active {
+    right: 0;
+}
+.mobile__menu .container {
+    position: relative;
+}
+.mobile__menu .header__right {
+    flex-direction: column;
+    align-items: center;
+}
+.mobile__menu .logo {
+    text-align: center;
+}
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #000000;
+    font-size: 60px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.mobile__menu .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.mobile__menu .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    height: 300px;
+}
+.mobile__menu .nav__link {
+    font-size: 22px;
+}
+.mobile__menu .header__contacts {
+    font-size: 22px;
+}
+.plus-mobile {
+    display: none;
+}
+.best-col-2 span,
+.best-col-1 span,
+.best-col-3 span {
+    display: none;
+} 
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+    .banner__slide button {
+        width: 100%;
+    }
+    .courses {
+        margin-top: -30px;
+    }
+    .banner__nav {
+        justify-content: center;
+        padding-top: 100px;
+    }
+    .courses__list {
+        padding-top: 0px;
+        flex-wrap: wrap;
+    }
+    .corses__item {
+        padding-top: 20px;
+        min-width: calc((100% - 40px)/2);
+    }
+    .calc__numbers span:nth-child(2),
+    .calc__numbers span:nth-child(3),
+    .calc__numbers span:nth-child(4),
+    .calc__clider-point {
+        display: none;
+    }
+    .calc__control label,
+    .calc__control input {
+        text-align: center;
+    }
+    .plus-mobile {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: 2px solid #9b9da1;
+        color: #9b9da1;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        line-height: 27px;
+        font-size: 34px;
+    }
+    .plus-mobile.plus {
+        right: 15px;
+    }
+    .plus-mobile.minus {
+        left: 15px;
+    }
+    .calculator__best_main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .calculator__best_params-list {
+        flex-direction: column;
+        padding-top: 20px;
+        width: 100%;
+    }
+    .calculator__best_params-item span {
+        margin-bottom: 0;
+    }
+    .calculator__best_params-item {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-bottom: 14px;
+    }
+    .calculator__best-controls {
+        flex-direction: column;
+    }
+    .calculator__best-controls button {
+        width: 100%;
+    }
+    .calculator__best-show-all {
+        margin-top: 10px;
+    }
+    .russia-banks {
+        max-width: 540px;
+    }
+    .best-mounth__card {
+        width: 100%;
+    }
+    .best-mounth__card:nth-child(2) {
+        display: none;
+    }
+    .best-credit__item:first-child {
+        display: none;
+    }
+    .best-credit__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        height: 130px;
+    }
+    .best-col-2, .best-col-1, .best-col-3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .best-col-2 span,
+    .best-col-1 span,
+    .best-col-3 span {
+        display: inline-block;
+        font-size: 16px;
+        color: rgba(155, 157, 161, 255);
+    }
+    .best__footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .best__refresh {
+        padding-top: 16px;
+    }
+    .feedback__item:nth-child(2) {
+        display: none
+    }
+    .feedback__item {
+        width: 100%;
+    }
+    .feedback__all {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .mobile .feedback-btns {
+        display: flex;
+        flex-direction: column;
+    }
+    .feedback-btns button {
+        width: 100%;
+    }
+    .footer .container {
+        flex-direction: column;
+    }
+    .footer__left {
+        text-align: center;
+    }
+    .footer__left p br{ 
+        display: none;
+    }
+    .footer__left {
+        order: 1;
+    }
+    .footer__right {
+        text-align: center;
+        order: 2;
+        padding: 27px 0;
+    }
+    .footer__center {
+        order: 3;
+    }
+    .footer__social-items {
+        width: 200px;
+    }
+}
+@media (max-width: 600px) {
+    .russia-banks {
+        padding: 50px 30px;
+    }
+    .container {
+        padding: 0 30px;
+    }
+    .best-mounth__tab:last-child {
+        display: none;
+    }
+    .best-mounth__tab {
+        margin-right: 30px;
+    }
+    .best-mounth__tab:nth-child(3) {
+        margin-right: 0;
+    }
+}
 /* Containers */
 .container {
     width: 100%;
