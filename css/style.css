@@ -58,6 +58,7 @@ body {
     text-transform: capitalize;
     text-decoration: none!important;
     color: #000000;
+    font-size: 16px;
 }
 .header__right {
     display: flex;
@@ -142,6 +143,7 @@ body {
 .banner__slider {
     display: flex;
     align-items: center;
+    transition: all 0.5s linear;
 }
 .banner__slide {
     min-width: 100%;

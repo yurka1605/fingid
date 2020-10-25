@@ -295,6 +295,17 @@ button {
     margin-top: -30px;
     cursor: pointer;
 }
+input[type="checkbox"]:checked:after, .checkbox input[type="checkbox"]:checked:after, .checkbox-inline input[type="checkbox"]:checked:after {
+    background-color: #ef3124;
+    border-color: #ef3124;
+}
+textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus {
+    box-shadow: none;
+}
+.zayms__card-mobile,
+.zaym__form-filters-mobile {
+    display: none;
+}
 
 @media (max-width: 992px) {
     .main-wrap {
@@ -313,7 +324,101 @@ button {
     .card__btn-help, .card__btn-zaym {
         margin-right: 20px;
     }
-    .best-mounth__card {
+    /* .best-mounth__card {
         width: calc((100% - 30px)/2);
+    } */
+    .zaym__form-group {
+        flex-wrap: wrap;
     }
+    .calc__control {
+        min-width: 100%;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+    .calc__control:last-child {
+        padding-bottom: 0;
+    }
+    .calc__numbers span {
+        display: inline!important;
+    }
+    .calc__control label, .calc__control input {
+        text-align: left;
+    }
+    button.zaym__form-filter {
+        display: none;
+    }
+    .zaym__form-filters-mobile {
+        display: block;
+    }
+    .example {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .example div {
+        width: 50%;
+    }
+    .zayms__sort {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sort__item:nth-child(3),
+    .sort__item:nth-child(4) {
+        display: none;
+    }
+    .zayms__card-bottom {
+        flex-direction: column;
+    }
+    .card__btns {
+        width: 100%;
+    }
+    .zayms__card-bottom button {
+        width: 100%;
+        margin-right: 0;
+    }
+    .card__license {
+        margin-top: 20px;
+    }
+    .zayms__card-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+    .zayms__card-head {
+        border-bottom: 1px solid #e4e6ea;
+    }
+    .zayms__card-head .zayms__card-icons {
+        display: none;
+    }
+    .zayms__card-middle {
+        flex-direction: column;
+        border-top: 0;
+        margin-top: 0;
+    }
+    .card__middle-item {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .zayms__card-middle .card__logo {
+        display: none;
+    }
+    .card__middle-item {
+        min-width: 100%;
+    }
+    .best-mounth__card {
+        display: none;
+        width: 100%;
+    }
+    .best-mounth__card:first-child {
+        display: block;
+    }
+}
+ul, ol {
+    margin-bottom: 0;
+}
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical>.btn-group:before, .btn-group-vertical>.btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+    content: none;
 }

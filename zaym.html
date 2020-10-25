@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nice-select.css">
     <link rel="stylesheet" href="./css/zaym.css">
@@ -49,6 +50,11 @@
                     <div class="header__contacts">
                         <a href="tel:+79765462143">+7 (976) 546-21-43</a>
                         <span class="header__address">Москва, Пушкина, 19</span>
+                    </div>
+                    <div class="header__burger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
                     </div>
                 </div>
             </div>
@@ -138,6 +144,54 @@
                             <button class="zaym__form-filter">С просрочками</button>
                             <button class="zaym__form-filter">Пенсионерам</button>
                             <button class="zaym__form-filter">Без проверок</button>
+                            <div class="zaym__form-filters-mobile">
+                                <div class="example">
+                                    <div>
+                                        <input type="checkbox" name="selectall-demo" id="selectall1" class="all" value="1">
+                                        <label for="selectall1">Все</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check1" value="1">
+                                        <label for="selectall2">С плохой КИ</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check2" value="2">
+                                        <label for="check2">Без процентов</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check3" value="3">
+                                        <label for="check3">По паспорту</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check4" value="4">
+                                        <label for="check4">На карту</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check5" value="5">
+                                        <label for="check5">Без отказа</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check6" value="6">
+                                        <label for="check6">Круглосуточно</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check7" value="7">
+                                        <label for="check7">С просрочками</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check8" value="8">
+                                        <label for="check8">Пенсионерам</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check9" value="9">
+                                        <label for="check9">Без проверок</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="check[]" id="check10" value="10">
+                                        <label for="check10">C 18 лет</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -161,6 +215,15 @@
                         <div class="zayms__card">
                             <div class="zayms__card-head">
                                 <h3>Первый беспроцентный</h3>
+                                <div class="zayms__card-icons">
+                                    <img src="./img/icons/chart.png" alt="chart">
+                                    <img src="./img/icons/heart.svg" alt="heart">
+                                </div>
+                            </div>
+                            <div class="zayms__card-mobile">
+                                <div class="card__logo">
+                                    <img src="./img/zaym/platiza.png" alt="platiza">
+                                </div>
                                 <div class="zayms__card-icons">
                                     <img src="./img/icons/chart.png" alt="chart">
                                     <img src="./img/icons/heart.svg" alt="heart">
@@ -202,6 +265,15 @@
                         <div class="zayms__card">
                             <div class="zayms__card-head">
                                 <h3>Пилотаж</h3>
+                                <div class="zayms__card-icons">
+                                    <img src="./img/icons/chart.png" alt="chart">
+                                    <img src="./img/icons/heart.svg" alt="heart">
+                                </div>
+                            </div>
+                            <div class="zayms__card-mobile">
+                                <div class="card__logo">
+                                    <img src="./img/zaym/moneyman.png" alt="moneyman">
+                                </div>
                                 <div class="zayms__card-icons">
                                     <img src="./img/icons/chart.png" alt="chart">
                                     <img src="./img/icons/heart.svg" alt="heart">
@@ -457,9 +529,56 @@
             </div>
         </div>
     </footer>
+    <div class="mobile__menu">
+        <div class="container">
+            <div class="close-btn">×</div>
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="Logotype">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav__list">
+                        <li class="nav__list_item">
+                            <a href="./zaym.html" class="nav__link">Микрозаймы</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Кредиты</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Карты</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">О компании</a>
+                        </li>
+                        <li class="nav__list_item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <div style="display: flex; padding: 50px 0;">
+                        <div class="header-right_icon search">
+                            <img src="./img/icons/find-icon.png" alt="find">
+                        </div>
+                        <div class="header-right_icon user">
+                            <img src="./img/icons/user-icon.png" alt="user">
+                        </div>
+                        <div class="header-right_icon phone">
+                            <img src="./img/icons/phone-icon.png" alt="phone">
+                        </div>
+                    </div>
+                    <div class="header__contacts">
+                        <a href="tel:+79765462143">+7 (976) 546-21-43</a>
+                        <span class="header__address">Москва, Пушкина, 19</span>
+                    </div>
+                </div>
+        </div>
+    </div>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/jquery.nice-select.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/jquery.checkboxall-1.0.min.js"></script>
     <script src="./js/zaym.js"></script>
 </body>
 </html>
