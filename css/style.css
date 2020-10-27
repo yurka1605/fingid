@@ -297,13 +297,13 @@ body {
 }
 .calc__slider-current {
     background-color: #ef3124;
-    width: 73%;
+    width: 81%;
     height: 100%;
     transition: all .3s linear;
 }
 .calc__clider-point {
     position: absolute;
-    left: 73%;
+    left: 81%;
     top: -6px;
     margin-left: -6px;
     width: 15px;
