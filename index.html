@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Fingid</title>
 </head>
@@ -157,12 +158,14 @@
                             <div class="form-control__wrap control-summ">
                                 <div class="plus-mobile minus">-</div>
                                 <label for="summ">Сумма микрозайма</label>
-                                <input value="7 300 ₽" id="summ" type="text">
-                                <div class="calc__slider">
-                                    <div class="calc__slider-current"></div>
-                                    <div class="calc__clider-point"></div>
-                                </div>
+                                <div class="plus-mobile minus">-</div>
+                                <input data-name="summ" value="7300 ₽" id="summ" type="text">
                                 <div class="plus-mobile plus">+</div>
+                                <div class="calc__slider">
+                                    <!-- <div class="calc__slider-current"></div>
+                                    <div class="calc__clider-point"></div> -->
+                                    <div id="summ-slider"></div>
+                                </div>
                             </div>
                             <div class="calc__numbers">
                                 <span>1 000 ₽</span>
@@ -174,14 +177,15 @@
                         </div>
                         <div class="calc__control">
                             <div class="form-control__wrap control-srok">
-                                <div class="plus-mobile minus">-</div>
                                 <label for="srok">Срок микрозайма</label>
-                                <input value="18 дней" id="srok" type="text">
-                                <div class="calc__slider">
-                                    <div class="calc__slider-current"></div>
-                                    <div class="calc__clider-point"></div>
-                                </div>
+                                <div class="plus-mobile minus">-</div>
+                                <input data-name="srok" value="18 дней" id="srok" type="text">
                                 <div class="plus-mobile plus">+</div>
+                                <div class="calc__slider">
+                                    <!-- <div class="calc__slider-current"></div>
+                                    <div class="calc__clider-point"></div> -->
+                                    <div id="srok-slider"></div>
+                                </div>
                             </div>
                             <div class="calc__numbers">
                                 <span>1 день</span>
@@ -565,6 +569,8 @@
         </div>
     </div>
     <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

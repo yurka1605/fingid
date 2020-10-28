@@ -1,5 +1,24 @@
 $(document).ready(function () {
-
+    $( "#summ-slider" ).slider({
+        animate: false,
+        range: "min",
+        min: 1000,
+        max: 10000, 
+        value: 7300,
+        slide: function( event, ui ) {
+            $("#summ").val(writeSummValue(ui.value).string);
+        }
+    });
+    $( "#srok-slider" ).slider({
+        animate: false,
+        range: "min", 
+        min: 1,
+        max: 30,
+        value: 18,
+        slide: function( event, ui ) {
+            $("#srok").val(writeSrokValue(ui.value).string);
+        }
+    });
 });
 
 $(window).scroll(function () {
@@ -36,29 +55,30 @@ $('#summ').on('input', function () {
 });
 
 $('#summ').on('change', function () {
-    let current = $(this).val().replace(/[^0-9]/g, '');
+    const object = writeSummValue($(this).val().replace(/[^0-9]/g, ''));
+    $(this).val(object.string);
+    $("#summ-slider").slider( "value", object.value);
+});
+
+function writeSummValue(current) {
     const num = parseInt(current, 10);
     if (num >= 10000) {
-        current = 10000;
-        $(this).val('10 000 ₽');
+        return {
+            value: 10000,
+            string: '10000 ₽'
+        }
     } else if (num <= 1000) {
-        $(this).val('1 000 ₽');
-        current = 1000; 
+        return {
+            value: 1000,
+            string: '1000 ₽'
+        }
     } else {
-        const arr = `${ current }`.split('');
-        const newArr = [];
-        arr.forEach((el, i) => {
-            if (i && i % 3 === 0) {
-                newArr.push(i);
-            }
-        });
-        newArr.forEach(el => arr.reverse().splice(el, 0, ' '));
-        $(this).val(arr.reverse().join('') + ' ₽');
+        return {
+            value: current,
+            string: current + ' ₽'
+        }
     }
-    const childs = $(this).next().children();
-    $(childs[0]).css('width', `${ ((current - 1000) / 9000) * 100 }%`);
-    $(childs[1]).css('left', `${ ((current - 1000) / 9000) * 100 }%`);
-});
+}
 
 $('#srok').on('input', function () {
     const current = $(this).val().replace(/[^0-9]/g, '');
@@ -66,46 +86,61 @@ $('#srok').on('input', function () {
 });
 
 $('#srok').on('change', function () {
-    let current = $(this).val().replace(/[^0-9]/g, '');
+    const object = writeSrokValue($(this).val().replace(/[^0-9]/g, ''));
+    $(this).val(object.string);
+    $("#srok-slider").slider( "value", object.value);
+});
+
+$('.plus-mobile').on('click', function (e) {
+    e.preventDefault();
+    let obj;
+    if ($(this).hasClass('plus')) {
+        const val = $(this).prev().val().replace(/[^0-9]/g, '');
+        if ($(this).prev().data('name') === 'summ') {
+            obj = writeSummValue(500 + parseInt(val, 10));
+            $(this).prev().val(obj.string);
+            $("#summ-slider").slider( "value", obj.value);
+        } else {
+            obj = writeSrokValue(1 + parseInt(val, 10));
+            $(this).prev().val(writeSrokValue(1 + parseInt(val, 10)).string);
+            $("#srok-slider").slider( "value", obj.value);
+        }
+    } else {
+        const val = $(this).next().val().replace(/[^0-9]/g, '');
+        if ($(this).next().data('name') === 'summ') {
+            obj = writeSummValue(parseInt(val, 10) - 500);
+            $(this).next().val(obj.string);
+            $("#summ-slider").slider( "value", obj.value);
+        } else {
+            obj = writeSrokValue(parseInt(val, 10) - 1);
+            $(this).next().val(obj.string);
+            $("#srok-slider").slider( "value", obj.value);
+        }
+    }
+})
+
+function writeSrokValue(current) {
     const num = parseInt(current, 10);
     if (num >= 30) {
-        current = 30;
-        $(this).val('30 дней');
+        return {
+            value: 30,
+            string: '30 дней'
+        }
     } else if (num <= 1) {
-        $(this).val('1 день');
-        current = 1;
+        return {
+            value: 1,
+            string: '1 день'
+        }
     } else {
         let ost = ' дней';
-        console.log((!/12/g.test(current) || !/13/g.test(current) || !/14/g.test(current)));
-        if (/1/g.test(current) && !/11/g.test(current) && !/12/g.test(current) && !/13/g.test(current) && !/14/g.test(current)) {
+        if (current === 1 || current === 21) {
             ost = ' день';
-        } else if (
-            (!/12/g.test(current) && !/13/g.test(current) && !/14/g.test(current)) &&
-            (/2/g.test(current) || /3/g.test(current) || /4/g.test(current))
-        ) {
+        } else if (current === 2 || current === 3 || current === 4 || current === 22 || current === 23 || current === 24) {
             ost = ' дня';
         }
-        $(this).val(current + ost );
+        return {
+            value: current,
+            string: current + ost
+        }
     }
-    const childs = $(this).next().children();
-    $(childs[0]).css('width', `${ ((current - 1) / 29) * 100 }%`);
-    $(childs[1]).css('left', `${ ((current - 1) / 29) * 100 }%`);
-});
-
-let isDown = false;
-let startPointX;
-$('.control-summ .calc__clider-point').on('mousedown', function (e) {
-    isDown = true;
-    startPointX = e.clientX;
-});
-
-$('.calc__control').on('mousemove', function (e) {
-    console.log(isDown);
-    if (isDown) {
-        console.log(startPointX - e.clientX);
-    }
-});
-
-$('.control-summ .calc__clider-point').on('mouseup', function() { 
-    isDown = false;
-});
+}
